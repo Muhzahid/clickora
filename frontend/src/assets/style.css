@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .animated-card {
+    @apply relative bg-white p-8 rounded-xl shadow-md transition-transform hover:-translate-y-2;
+    overflow: hidden;
+  }
+
+.animated-border {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  transition: stroke-dashoffset 2.6s linear;
+}
+  .animated-card:hover .animated-border {
+    stroke-dashoffset: 0;
+  }
+}
